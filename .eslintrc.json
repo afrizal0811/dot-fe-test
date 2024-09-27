@@ -17,6 +17,7 @@
   },
   "plugins": ["react", "react-hooks"],
   "rules": {
+    "react/prop-types": "off"
     //add customize rules here as per your project's needs
   }
 }

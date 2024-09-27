@@ -1,10 +1,13 @@
 import React from 'react'
-import Testing from './components/Testing'
+import { BrowserRouter } from 'react-router-dom'
+import RouteHandler from './RouteHandler'
 
 function App() {
   return (
     <div className='App'>
-      <Testing />
+      <BrowserRouter>
+        <RouteHandler />
+      </BrowserRouter>
     </div>
   )
 }
