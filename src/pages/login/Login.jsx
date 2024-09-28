@@ -1,16 +1,25 @@
 import { Form } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
-import { apiValidation, postApi } from '../../api/handleApi'
-import { Button, Input, Password } from '../../components/antd'
+import { Button, FormItem, Input, Password } from '../../components/antd'
+import getFormField from '../../utilities/getFormField'
 import { getLocalStorage } from '../../utilities/handleStorage'
+import * as message from '../../utilities/message'
+import LoginValidation from '../../validation/LoginValidation'
 import { StyledCard } from './StyledComponents'
 
 const Login = () => {
   const { navigate } = useOutletContext()
-  const [currToken, setCurrToken] = useState()
-  const [isLoading, setIsLoading] = useState(false)
   const [form] = Form.useForm()
+  const [fields, setFields] = useState([])
+  const emailField = getFormField(fields, 'email')
+  const passwordField = getFormField(fields, 'password')
+
+  const { errors, handleChange, handleFinish, isLoading } = LoginValidation(
+    navigate,
+    emailField,
+    passwordField
+  )
 
   useEffect(() => {
     if (getLocalStorage('token')) {
@@ -18,66 +27,52 @@ const Login = () => {
     } else {
       navigate('/')
     }
-    
-    if (getLocalStorage('token') === currToken) {
-      navigate('/users')
-    }
-  }, [navigate, currToken])
-
-
-  const onFinish = async (values) => {
-    const fetchData = async () => {
-      setIsLoading(true)
-      const url = `${process.env.REACT_APP_BASE_URL}/api/login`
-      const response = await postApi(url, values)
-      console.log('response :', response)
-      if (response) {
-        apiValidation(response)
-        setCurrToken(response.token)
-      }
-      if (getLocalStorage('token') === currToken) navigate('/users')
-      setIsLoading(false)
-    }
-    fetchData()
-  }
+  }, [navigate])
 
   return (
     <StyledCard
       title='Login User'
       bordered={true}
     >
-      {/* {validation ? 'Gagal' : 'Berhasil'} */}
+      {errors.failedAlert && message.error(errors.failedAlert)}
       <Form
         autoComplete='off'
+        fields={fields}
         form={form}
         layout='vertical'
         name='add-form'
-        onFinish={onFinish}
+        noValidate
+        onFieldsChange={(_, allFields) => {
+          setFields(allFields)
+        }}
+        onFinish={handleFinish}
       >
-        <Form.Item
-          label='Username'
-          name='username'
-          rules={[
-            {
-              required: true,
-              message: `Please input username!`,
-            },
-          ]}
+        <FormItem
+          errors={errors.email}
+          label='Email'
+          name='email'
+          fields={emailField}
         >
-          <Input placeholder='Input Username' />
-        </Form.Item>
-        <Form.Item
+          <Input
+            placeholder='Input your email'
+            name='email'
+            type='email'
+            onChange={handleChange}
+          />
+        </FormItem>
+        <FormItem
+          errors={errors.password}
           label='Password'
           name='password'
-          rules={[
-            {
-              required: true,
-              message: `Please input password!`,
-            },
-          ]}
+          fields={passwordField}
         >
-          <Password placeholder='Input Password' />
-        </Form.Item>
+          <Password
+            placeholder='Input your password'
+            name='password'
+            type='password'
+            onChange={handleChange}
+          />
+        </FormItem>
         <Button
           type='primary'
           htmlType='submit'
