@@ -10,16 +10,18 @@
   * Email : eve.holt@reqres.in
   * Password : cityslicka
 
+-----
+
 ## `Workflow`
 
 1. Pengguna memasukan _email_ dan _password_ pada halaman _login_ yang tersedia, lalu menekan tombol _login_.
-   ![login](https://github.com/user-attachments/assets/d1af55f5-df14-4a85-a8d7-6d1a20046438)
+   ![login](https://github.com/user-attachments/assets/67fac9aa-8b70-42fd-b9c9-78f9d2c75c33)
 2. Saat berhasil melakukan proses _login_, halaman utama (_users_) akan tampil.
-   ![users](https://github.com/user-attachments/assets/72288217-5db5-46a2-a011-2777626cbaf7)
+   ![users](https://github.com/user-attachments/assets/372ac265-0972-423d-a96d-10459ef4cba7)
 3. Pengguna dapat menekan tombol _View_ untuk melihat  detail masing-masing data yang tersedia.
 4. Saat pengguna menekan tombol _View_, halaman detail dari _user_ terpilih akan tampil.
 5. Untuk kembali ke halaman _users_, pengguna dapat menekan tombol _back_.
-   ![detail](https://github.com/user-attachments/assets/b1112a16-693e-43f4-90e5-b8e7ef373287)
+   ![detail](https://github.com/user-attachments/assets/af5d5103-c21c-40a1-83d4-16c927b70e32)
 6. Jika ingin keluar dari sistem, pengguna dapat menekan tombol _logout_ pada _navigation bar_, lalu halaman _login_ akan tampil.
 
 * NB :
