@@ -1,13 +1,14 @@
 import styled from 'styled-components'
-import { Card, Flex } from '../../components/antd'
-import color from '../../constants/color'
+import { Card, Flex } from './components/antd'
+import color from './constants/color'
+
 export const StyledFlex = styled(Flex)`
   height: 100vh;
-  background-color: ${color.beauBlue};
+  padding: ${(props) => (props.$padding ? '20px' : '0')};
 `
 export const StyledCard = styled(Card)`
   background-color: ${color.lavenderWeb};
-  width: 500px;
+  width: ${(props) => `${props.$size}`};
   padding: 20px 10px;
   margin: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),

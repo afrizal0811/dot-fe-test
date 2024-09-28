@@ -5,7 +5,7 @@ export const getApi = async (URL) => {
   const url = await axios
     .get(URL)
     .then((response) => {
-      return response
+      return response.data
     })
     .catch((error) => {
       return error

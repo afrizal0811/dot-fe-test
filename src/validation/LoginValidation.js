@@ -24,7 +24,7 @@ const LoginValidation = (navigate, emailField, passwordField) => {
     setIsLoading(true)
     setIsSubmitted(true)
     setErrors(validateForm(value))
-    const url = `${process.env.REACT_APP_BASE_URL}/api/login`
+    const url = `${process.env.REACT_APP_BASE_URL}/login`
     if (isObjectEmpty(errors) && isFieldsTouched) {
       const result = await postApi(url, value)
       const isError = apiValidation(result)

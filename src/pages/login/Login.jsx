@@ -1,13 +1,13 @@
 import { Form } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { StyledCard, StyledFlex } from '../../StyledComponents'
 import { Button, FormItem, Image, Input, Password } from '../../components/antd'
 import imagePath from '../../constants/imagePath'
 import getFormField from '../../utilities/getFormField'
 import { getLocalStorage } from '../../utilities/handleStorage'
 import * as message from '../../utilities/message'
 import LoginValidation from '../../validation/LoginValidation'
-import { StyledCard, StyledFlex } from './StyledComponents'
 const Login = () => {
   const { navigate } = useOutletContext()
   const [form] = Form.useForm()
@@ -35,6 +35,7 @@ const Login = () => {
       align='center'
     >
       <StyledCard
+        $size='500px'
         cover={
           <Image
             src={imagePath.logo}
