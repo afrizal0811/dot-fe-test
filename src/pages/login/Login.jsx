@@ -86,6 +86,7 @@ const Login = () => {
             />
           </FormItem>
           <Button
+            block
             type='primary'
             htmlType='submit'
             loading={isLoading}
