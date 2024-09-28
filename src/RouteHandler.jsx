@@ -1,9 +1,11 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
 import Login from './pages/login/Login'
+import NotFound from './pages/not_found/NotFound'
 import Users from './pages/users/Users'
 import ViewUser from './pages/users/ViewUser'
+
 const RouteHandler = () => {
   return (
     <Routes>
@@ -20,7 +22,7 @@ const RouteHandler = () => {
           path='/users:id'
           element={<ViewUser />}
         />
-        {/* <Route
+        <Route
           element={<NotFound />}
           path='404'
         />
@@ -32,7 +34,7 @@ const RouteHandler = () => {
             />
           }
           path='*'
-        /> */}
+        />
       </Route>
     </Routes>
   )
