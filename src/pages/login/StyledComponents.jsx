@@ -1,13 +1,19 @@
 import styled from 'styled-components'
-import { Card } from '../../components/antd'
+import { Card, Flex } from '../../components/antd'
 
+export const StyledFlex = styled(Flex)`
+  height: 100vh;
+`
 export const StyledCard = styled(Card)`
-  border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
-  padding: 10px;
-  box-shadow: 11px 11px 13px rgba(0, 0, 0, 0.1),
-    100px 100px 100px rgba(0, 0, 0, 0.07);
-  width: 50%;
-  margin: auto;
-  margin-top: 100px;
+  width: 500px;
+  padding: 20px 10px;
+  margin: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+    20px 20px 20px rgba(0, 0, 0, 0.01);
+  .ant-card-cover {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;
+  }
 `

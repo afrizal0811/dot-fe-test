@@ -2,14 +2,13 @@ import { Image } from 'antd'
 import React from 'react'
 
 const AntdImage = (props) => {
-  const { width, src, items } = props
+  const { width, src, isPreview } = props
   return (
-    <Image.PreviewGroup items={items}>
-      <Image
-        width={width}
-        src={src}
-      />
-    </Image.PreviewGroup>
+    <Image
+      width={width}
+      src={src}
+      preview={isPreview}
+    />
   )
 }
 
