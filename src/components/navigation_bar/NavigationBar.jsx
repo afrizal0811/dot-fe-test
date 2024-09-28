@@ -7,6 +7,7 @@ import {
   StyledDrawer,
   StyledLogoContainer,
   StyledMenu,
+  StyledNav,
 } from './StyledComponents'
 
 const NavigationBar = (props) => {
@@ -51,11 +52,11 @@ const NavigationBar = (props) => {
     )
   }
   return (
-    <Flex
+    <StyledNav
       align='middle'
       justify='space-between'
     >
-      <StyledLogoContainer>
+      <StyledLogoContainer onClick={() => navigate('/users')}>
         <Image
           src={imagePath.logoDark}
           isPreview={false}
@@ -70,7 +71,7 @@ const NavigationBar = (props) => {
           <AntdCol span={24}>{renderMenus()}</AntdCol>
         </Flex>
       </AntdCol>
-    </Flex>
+    </StyledNav>
   )
 }
 

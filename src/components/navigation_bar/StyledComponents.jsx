@@ -1,8 +1,11 @@
 import { MenuOutlined } from '@ant-design/icons'
 import { default as AntdCol } from 'antd/lib/col'
 import styled from 'styled-components'
-import { Menu } from '../antd'
+import { Flex, Menu } from '../antd'
 
+export const StyledNav = styled(Flex)`
+  padding: 10px 0;
+`
 export const StyledDrawer = styled(MenuOutlined)`
   color: black;
   font-size: 20px !important;
