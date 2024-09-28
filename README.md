@@ -12,12 +12,13 @@
 
 ## `Workflow`
 
-1. Pengguna memasukan _email_ dan _password_ pada halaman _login_ yang tersedia, lalu menekan tombol _login_. 
-2. Saat berhasil melakukan proses _login_, halaman utama (_users_) akan tampil.
-3. Pengguna dapat menekan tombol _View_ untuk melihat  detail masing-masing data yang tersedia.
-4. Saat pengguna menekan tombol _View_, halaman detail dari _user_ terpilih akan tampil.
-5. Untuk kembali ke halaman _users_, pengguna dapat menekan tombol _back_.
-6. Jika ingin keluar dari sistem, pengguna dapat menekan tombol _logout_ pada _navigation bar_, lalu halaman _login_ akan tampil.
+1. Pengguna memasukan _email_ dan _password_ pada halaman _login_ yang tersedia, lalu menekan tombol _login_.
+   ![login](https://github.com/user-attachments/assets/d1af55f5-df14-4a85-a8d7-6d1a20046438)
+3. Saat berhasil melakukan proses _login_, halaman utama (_users_) akan tampil.
+4. Pengguna dapat menekan tombol _View_ untuk melihat  detail masing-masing data yang tersedia.
+5. Saat pengguna menekan tombol _View_, halaman detail dari _user_ terpilih akan tampil.
+6. Untuk kembali ke halaman _users_, pengguna dapat menekan tombol _back_.
+7. Jika ingin keluar dari sistem, pengguna dapat menekan tombol _logout_ pada _navigation bar_, lalu halaman _login_ akan tampil.
 
 * NB :
   * _Email_ dan _password_ sudah tercantum pada _Basic Information_.
