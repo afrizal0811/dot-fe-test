@@ -11,6 +11,7 @@ const AntdButton = (props) => {
     htmlType,
     width,
     loading,
+    textColor,
   } = props
   return (
     <Button
@@ -22,6 +23,7 @@ const AntdButton = (props) => {
       onClick={onClick}
       type={type}
       width={width}
+      style={{ color: textColor }}
     >
       {children}
     </Button>

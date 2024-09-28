@@ -10,4 +10,10 @@ body {
 
 body {
   background-color: #bed4e9;
+  /* background: linear-gradient(
+    145deg,
+    rgba(51, 115, 176, 1) 5%,
+    rgba(11, 56, 95, 1) 80%,
+    rgba(28, 33, 39, 1) 90%
+  ); */
 }

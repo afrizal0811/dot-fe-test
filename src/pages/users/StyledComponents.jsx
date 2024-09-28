@@ -1,3 +1,4 @@
+import { LeftOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 import { Flex } from '../../components/antd'
 
@@ -7,10 +8,15 @@ export const StyledButtonContainer = styled(Flex)`
 `
 
 export const StyledContentContainer = styled(Flex)`
+  padding: 0 15px;
   height: 100vh;
   width: 100%;
-  padding-left: 20px;
   @media (max-width: 768px) {
     height: 100%;
   }
+`
+
+export const StyledLeftIcon = styled(LeftOutlined)`
+  font-size: 16px;
+  color: black;
 `

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
-import { StyledCard, StyledFlexContainer } from '../../StyledComponents'
+import { StyledCard } from '../../StyledComponents'
 import { getApi } from '../../api/handleApi'
+import { usersUrl } from '../../constants/constants'
 import {
   deleteLocalStorage,
   getLocalStorage,
 } from '../../utilities/handleStorage'
+import { StyledContentContainer } from './StyledComponents'
 import UsersTable from './table/usersTable'
-import { usersUrl } from '../../constants/constants'
-
 const Users = () => {
   const { navigate } = useOutletContext()
   const [values, setValues] = useState([])
@@ -44,8 +44,7 @@ const Users = () => {
   }
 
   return (
-    <StyledFlexContainer
-      $padding={true}
+    <StyledContentContainer
       justify='center'
       align='center'
     >
@@ -58,7 +57,7 @@ const Users = () => {
           navigate={navigate}
         />
       </StyledCard>
-    </StyledFlexContainer>
+    </StyledContentContainer>
   )
 }
 

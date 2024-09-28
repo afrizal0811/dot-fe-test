@@ -1,4 +1,3 @@
-import { LeftOutlined } from '@ant-design/icons'
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { StyledCard } from '../../StyledComponents'
@@ -13,6 +12,7 @@ import * as message from '../../utilities/message'
 import {
   StyledButtonContainer,
   StyledContentContainer,
+  StyledLeftIcon,
 } from './StyledComponents'
 
 const ViewUser = () => {
@@ -49,9 +49,10 @@ const ViewUser = () => {
     <div>
       <StyledButtonContainer>
         <Button
-          icon={<LeftOutlined />}
+          icon={<StyledLeftIcon />}
           onClick={() => navigate('/users')}
-          type='primary'
+          type='text'
+          textColor='black'
         >
           Back
         </Button>
@@ -64,7 +65,7 @@ const ViewUser = () => {
           spinning={loading}
           tip='Loading...'
         >
-          <StyledCard $width='400px'>
+          <StyledCard $width='350px'>
             <Flex
               gap='middle'
               justify='center'

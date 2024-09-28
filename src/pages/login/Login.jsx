@@ -39,9 +39,9 @@ const Login = () => {
         $width='500px'
         cover={
           <Image
-            src={imagePath.logo}
+            src={imagePath.logoDark}
             isPreview={false}
-            width={75}
+            width={50}
           />
         }
         title='Log in to your account'
