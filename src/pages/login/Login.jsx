@@ -1,6 +1,6 @@
 import { Form } from 'antd'
 import React, { useEffect, useState } from 'react'
-import { useOutletContext } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { StyledCard, StyledFlex } from '../../StyledComponents'
 import { Button, FormItem, Image, Input, Password } from '../../components/antd'
 import imagePath from '../../constants/imagePath'
@@ -8,8 +8,9 @@ import getFormField from '../../utilities/getFormField'
 import { getLocalStorage } from '../../utilities/handleStorage'
 import * as message from '../../utilities/message'
 import LoginValidation from '../../validation/LoginValidation'
+
 const Login = () => {
-  const { navigate } = useOutletContext()
+  const navigate = useNavigate()
   const [form] = Form.useForm()
   const [fields, setFields] = useState([])
   const emailField = getFormField(fields, 'email')

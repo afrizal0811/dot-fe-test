@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../../components/antd'
+import { Button, Flex } from '../../../components/antd'
 
 export const columns = (handleView) => [
   {
@@ -32,12 +32,14 @@ export const columns = (handleView) => [
     width: 25,
     fixed: 'right',
     render: (text, record) => (
-      <Button
-        onClick={() => handleView(record)}
-        type='primary'
-      >
-        View
-      </Button>
+      <Flex justify='center'>
+        <Button
+          onClick={() => handleView(record)}
+          type='primary'
+        >
+          View
+        </Button>
+      </Flex>
     ),
   },
 ]

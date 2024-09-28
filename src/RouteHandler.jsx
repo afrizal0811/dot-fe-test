@@ -9,31 +9,31 @@ import ViewUser from './pages/users/ViewUser'
 const RouteHandler = () => {
   return (
     <Routes>
+      <Route
+        path='/'
+        element={<Login />}
+      />
+      <Route
+        element={<NotFound />}
+        path='404'
+      />
+      <Route
+        element={
+          <Navigate
+            replace
+            to='404'
+          />
+        }
+        path='*'
+      />
       <Route element={<Layout />}>
-        <Route
-          path='/'
-          element={<Login />}
-        />
         <Route
           path='/users'
           element={<Users />}
         />
         <Route
-          path='/users:id'
+          path='/users/:id'
           element={<ViewUser />}
-        />
-        <Route
-          element={<NotFound />}
-          path='404'
-        />
-        <Route
-          element={
-            <Navigate
-              replace
-              to='404'
-            />
-          }
-          path='*'
         />
       </Route>
     </Routes>
