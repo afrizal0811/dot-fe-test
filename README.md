@@ -14,16 +14,20 @@
 
 1. Pengguna memasukan _email_ dan _password_ pada halaman _login_ yang tersedia, lalu menekan tombol _login_.
    ![login](https://github.com/user-attachments/assets/d1af55f5-df14-4a85-a8d7-6d1a20046438)
-3. Saat berhasil melakukan proses _login_, halaman utama (_users_) akan tampil.
-4. Pengguna dapat menekan tombol _View_ untuk melihat  detail masing-masing data yang tersedia.
-5. Saat pengguna menekan tombol _View_, halaman detail dari _user_ terpilih akan tampil.
-6. Untuk kembali ke halaman _users_, pengguna dapat menekan tombol _back_.
-7. Jika ingin keluar dari sistem, pengguna dapat menekan tombol _logout_ pada _navigation bar_, lalu halaman _login_ akan tampil.
+2. Saat berhasil melakukan proses _login_, halaman utama (_users_) akan tampil.
+   ![users](https://github.com/user-attachments/assets/72288217-5db5-46a2-a011-2777626cbaf7)
+3. Pengguna dapat menekan tombol _View_ untuk melihat  detail masing-masing data yang tersedia.
+4. Saat pengguna menekan tombol _View_, halaman detail dari _user_ terpilih akan tampil.
+5. Untuk kembali ke halaman _users_, pengguna dapat menekan tombol _back_.
+   ![detail](https://github.com/user-attachments/assets/b1112a16-693e-43f4-90e5-b8e7ef373287)
+6. Jika ingin keluar dari sistem, pengguna dapat menekan tombol _logout_ pada _navigation bar_, lalu halaman _login_ akan tampil.
 
 * NB :
   * _Email_ dan _password_ sudah tercantum pada _Basic Information_.
   * _Email_ dan _password_ tersebut sudah disediakan oleh API eksternal.
   * Pengguna tidak dapat masuk/membuka halaman lain sebelum melakukan proses _login_.
+    
+-----
 
 # Getting Started with Create React App
 
