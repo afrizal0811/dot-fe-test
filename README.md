@@ -1,14 +1,27 @@
 # Afrizal Maulana - PT. Digdaya Olah Teknologi - Frontend Reactjs
 
-### `Information`
+## `Basic Information`
 
 * ReactJs Version : 18.3.1
 * Node.js Version : 18.17.1
 * Packages Manager : NPM
 * Website Hosting : [Vercel](https://dot-fe-afrizal.vercel.app/)
-* API Documentation = [Reqres.in](https://reqres.in/)
-  * email = eve.holt@reqres.in
-  * password = cityslicka
+* API Documentation : [Reqres.in](https://reqres.in/)
+  * Email : eve.holt@reqres.in
+  * Password : cityslicka
+
+## `Workflow`
+
+1. Pengguna memasukan _email_ dan _password_ pada halaman _login_ yang tersedia, lalu menekan tombol _login_. 
+2. Saat berhasil melakukan proses _login_, halaman utama (_users_) akan tampil.
+3. Pengguna dapat menekan tombol _View_ untuk melihat masing-masing detail data yang tersedia.
+4. Saat pengguna menekan tombol _View_, halaman detail dari _user_ terpilih akan tampil.
+5. Pengguna dapat keluar dari sistem, pengguna dapat menekan tombol _logout_ pada _navigation bar_, lalu pengguna akan menuju ke halaman _login_.
+
+* NB :
+  * _Email_ dan _password_ sudah tercantum pada _Basic Information_.
+  * _Email_ dan _password_ tersebut sudah disediakan oleh API eksternal.
+  * Pengguna tidak dapat masuk/membuka halaman lain sebelum melakukan proses _login_.
 
 # Getting Started with Create React App
 
