@@ -1,13 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { StyledFlex } from '../../StyledComponents'
+import { StyledFlexContainer } from '../../StyledComponents'
 import { Button } from '../../components/antd'
 import { StyledNotFoundNumber, StyledNotFoundText } from './StyledComponents'
 
 const NotFound = () => {
   const navigate = useNavigate()
   return (
-    <StyledFlex
+    <StyledFlexContainer
       justify='center'
       align='center'
       vertical
@@ -24,7 +24,7 @@ const NotFound = () => {
       >
         Back to Home
       </Button>
-    </StyledFlex>
+    </StyledFlexContainer>
   )
 }
 

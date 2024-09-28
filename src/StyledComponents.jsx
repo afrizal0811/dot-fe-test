@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import { Card, Flex } from './components/antd'
 import color from './constants/color'
 
-export const StyledFlex = styled(Flex)`
+export const StyledFlexContainer = styled(Flex)`
   height: 100vh;
   padding: ${(props) => (props.$padding ? '20px' : '0')};
 `
 export const StyledCard = styled(Card)`
   background-color: ${color.lavenderWeb};
-  width: ${(props) => `${props.$size}`};
+  width: ${(props) => `${props.$width}`};
   padding: 20px 10px;
   margin: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),

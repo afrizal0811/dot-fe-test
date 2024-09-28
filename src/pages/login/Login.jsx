@@ -1,7 +1,7 @@
 import { Form } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { StyledCard, StyledFlex } from '../../StyledComponents'
+import { StyledCard, StyledFlexContainer } from '../../StyledComponents'
 import { Button, FormItem, Image, Input, Password } from '../../components/antd'
 import imagePath from '../../constants/imagePath'
 import getFormField from '../../utilities/getFormField'
@@ -31,12 +31,12 @@ const Login = () => {
   }, [navigate])
 
   return (
-    <StyledFlex
+    <StyledFlexContainer
       justify='center'
       align='center'
     >
       <StyledCard
-        $size='500px'
+        $width='500px'
         cover={
           <Image
             src={imagePath.logo}
@@ -97,7 +97,7 @@ const Login = () => {
           </Button>
         </Form>
       </StyledCard>
-    </StyledFlex>
+    </StyledFlexContainer>
   )
 }
 

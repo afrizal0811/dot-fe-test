@@ -29,9 +29,8 @@ export const apiValidation = (result) => {
   let data = ''
   if (result.status >= 400) {
     data = result.response.data.error
-    return data
   } else {
     setLocalStorage(result)
-    return data
   }
+  return data
 }

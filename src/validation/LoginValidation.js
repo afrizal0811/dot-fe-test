@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { apiValidation, postApi } from '../api/handleApi'
+import { loginUrl } from '../constants/constants'
 import isObjectEmpty from '../utilities/isObjectEmpty'
 import validateForm from './error_validation/login'
 
@@ -24,7 +25,7 @@ const LoginValidation = (navigate, emailField, passwordField) => {
     setIsLoading(true)
     setIsSubmitted(true)
     setErrors(validateForm(value))
-    const url = `${process.env.REACT_APP_BASE_URL}/login`
+    const url = process.env.REACT_APP_BASE_URL + loginUrl
     if (isObjectEmpty(errors) && isFieldsTouched) {
       const result = await postApi(url, value)
       const isError = apiValidation(result)

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
-import { StyledCard, StyledFlex } from '../../StyledComponents'
+import { StyledCard, StyledFlexContainer } from '../../StyledComponents'
 import { getApi } from '../../api/handleApi'
 import {
   deleteLocalStorage,
   getLocalStorage,
 } from '../../utilities/handleStorage'
 import UsersTable from './table/usersTable'
+import { usersUrl } from '../../constants/constants'
 
 const Users = () => {
   const { navigate } = useOutletContext()
@@ -26,7 +27,7 @@ const Users = () => {
   useEffect(() => {
     const fetch = async () => {
       setLoading(true)
-      const url = `${process.env.REACT_APP_BASE_URL}/users?page=${page.current}`
+      const url = `${process.env.REACT_APP_BASE_URL}${usersUrl}?page=${page.current}`
       const result = await getApi(url)
       setValues(result)
       setLoading(false)
@@ -43,12 +44,12 @@ const Users = () => {
   }
 
   return (
-    <StyledFlex
+    <StyledFlexContainer
       $padding={true}
       justify='center'
       align='center'
     >
-      <StyledCard $size='100%'>
+      <StyledCard $width='100%'>
         <UsersTable
           data={values.data}
           handlePageChange={handlePageChange}
@@ -57,7 +58,7 @@ const Users = () => {
           navigate={navigate}
         />
       </StyledCard>
-    </StyledFlex>
+    </StyledFlexContainer>
   )
 }
 
