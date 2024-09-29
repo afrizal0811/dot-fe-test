@@ -30,7 +30,7 @@ const LoginValidation = (navigate, emailField, passwordField) => {
       const result = await postApi(url, value)
       const isError = apiValidation(result)
       if (!isError) {
-        await navigate('/users')
+        navigate('/users')
       } else {
         setErrors((prev) => ({
           ...prev,
