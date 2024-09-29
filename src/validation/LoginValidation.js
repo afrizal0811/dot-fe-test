@@ -29,7 +29,7 @@ const LoginValidation = (navigate, emailField, passwordField) => {
     if (isObjectEmpty(errors) && isFieldsTouched) {
       const result = await postApi(url, value)
       const isError = apiValidation(result)
-      if (!isError) {
+      if (isError === '') {
         navigate('/users')
       } else {
         setErrors((prev) => ({
